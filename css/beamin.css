@@ -1,0 +1,640 @@
+#header {
+    position: fixed;
+    right: 30%;
+    top: 70px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#header.on {
+    opacity: 0;
+    animation: 1s ease 0.3s 1 normal forwards running header;
+}
+
+#header.off {
+    z-index: -1;
+    opacity: 0;
+    transition: z-index 3s;
+    transition: opacity 3s;
+
+}
+
+#header.on2 {
+    z-index: 10;
+    opacity: 1;
+    transition: z-index 3s;
+    transition: opacity 3s;
+}
+
+
+@keyframes header {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#header>h1 {
+    width: 140px;
+    height: 30px;
+    background: url(../img/beamin/logo@2x.png)no-repeat center / cover;
+    font-size: 0;
+
+}
+
+#header .sns {
+    width: 350px;
+    height: 50px;
+}
+
+#header .sns ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+
+}
+
+/* 앱다운로드 */
+#header .sns ul>img {
+    width: 150px;
+    color: #fff;
+    opacity: 0;
+}
+
+#header .scroll {
+    position: absolute;
+    bottom: -580px;
+    left: 55%;
+    font-size: 0;
+    animation: 0.5s ease 0s 3 normal none running jump;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* 메뉴바 */
+#menuBar {
+    position: fixed;
+    right: 160px;
+    bottom: 180px;
+    z-index: 2001;
+    font-size: 0;
+    opacity: 0;
+}
+
+
+#menuBar .gnb li.active a {
+    display: block;
+    background: url(../img/beamin/dotSelect@2x.png) no-repeat center / cover;
+    width: 25px;
+    height: 25px;
+    z-index: 2001;
+    margin-bottom: 10px;
+}
+
+.gnb img {
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* 스크롤, 라이더모집 */
+.rider-wrap {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+}
+
+.rider-wrap>a {
+    pointer-events: none;
+}
+
+.rider-wrap>a>img {
+    width: 170px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* 
+.content>a>img {
+    width: 100%;
+}
+.content>a {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 170px;
+} */
+
+
+
+/* 풀페이지 */
+/* 섹션1 */
+
+.s1 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.s1 .bg {
+    background: url(../img/beamin/main_05@2x.jpg) no-repeat center / cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    animation: 1s linear 0s 1 normal forwards running moveBackground;
+
+}
+
+@keyframes moveBackground {
+
+    from {
+        transform: scale(1.5);
+    }
+}
+
+.s1 .content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.content>img {
+    width: 470px;
+    position: absolute;
+    top: 23%;
+    left: 20%;
+}
+
+
+
+.s1-bottom {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 72vh;
+    left: 20vw;
+}
+
+.app>p {
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.app-down-btn>a {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 15px 30px;
+}
+
+.btn1 {
+    margin-right: 5px;
+}
+
+.app-down-btn>a>img {
+    width: 130px;
+}
+
+.qr>img {
+    width: 150px;
+}
+
+.qr>p {
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+
+/* 섹션2 */
+.s2 {
+    background-color: #2AC1BC;
+}
+
+.s2-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: auto;
+}
+
+.s2 .txt-area {
+    width: 30%;
+    padding-top: 180px;
+}
+
+.s2 .txt-area>img {
+    width: 450px;
+}
+
+.s2 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.s2 .txt-area>span {
+    color: rgba(255, 255, 255, 0.552);
+    font-size: 14px;
+}
+
+.s2 .img-area {
+    width: 700px;
+    position: relative;
+    left: 200px;
+    /* top: -180px; */
+}
+
+.s2 .img-area .road {
+    width: 100%;
+    position: absolute;
+}
+
+.s2 .img-area .bike {
+    width: 100%;
+    position: absolute;
+    left: -110px;
+    top: -100px;
+}
+
+.bike.on {
+    transform: translate(100px, 110px);
+    transition: 1s;
+}
+
+/* 섹션 3 */
+.s3 {
+    background-color: #2AC1BC;
+}
+
+.s3-wrap {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.s3 .txt-area {
+    width: 480px;
+    margin-left: 300px;
+    margin-top: 90px;
+}
+
+.s3 .txt-area>img {
+    width: 100%;
+    padding-top: 80px;
+}
+
+.s3 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.s3 .txt-area>span {
+    color: rgba(255, 255, 255, 0.552);
+    font-size: 14px;
+}
+
+.s3-wrap>img {
+    position: relative;
+    width: 650px;
+    top: 430px;
+    left: -180px;
+
+}
+
+#s3-img.on1 {
+    top: 0;
+    transition: top 1s;
+}
+
+/* 섹션 4 */
+.s4 {
+    background-color: #2AC1BC;
+}
+
+.s4-wrap {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.s4 .txt-area {
+    margin-left: 20vw;
+    margin-top: 120px;
+}
+
+.s4 .txt-area>img:nth-child(1) {
+    width: 470px;
+    padding-top: 50px;
+}
+
+.s4 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.s4 .txt-area>img:nth-child(3) {
+    width: 230px;
+}
+
+.s4-imgbox {
+    padding-top: 17vh;
+}
+
+.s4-imgbox>img {
+    position: relative;
+    width: 600px;
+    top: 450px;
+    left: -100px;
+}
+
+#s4-img.on2 {
+    top: 0;
+    transition: top 1s;
+}
+
+
+/* 섹션 5 */
+.s5 {
+    background-color: #2AC1BC;
+}
+
+.s5-wrap {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.s5 .txt-area {
+    width: 480px;
+    margin-left: 300px;
+    margin-top: 120px;
+}
+
+.s5 .txt-area>img {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.s5 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.s5-imgbox>img {
+    position: relative;
+    width: 650px;
+    top: 470px;
+    left: -140px;
+
+}
+
+#s5-img.on3 {
+    top: 71px;
+    transition: top 1s;
+}
+
+/* 섹션 6 */
+.s6 {
+    background-color: #2AC1BC;
+}
+
+.s6-wrap {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.s6 .txt-area {
+    margin-left: 20vw;
+    margin-top: 120px;
+}
+
+.s6 .txt-area>img {
+    width: 480px;
+    padding-top: 50px;
+}
+
+.s6 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.s6 .txt-area>span {
+    color: rgba(255, 255, 255, 0.552);
+    font-size: 14px;
+}
+
+.s6-imgbox {
+    width: 650px;
+    position: relative;
+}
+
+.s6-imgbox>img {
+    position: absolute;
+    width: 650px;
+    bottom: 150px;
+    left: 400px;
+    opacity: 0;
+}
+
+#s6-img.on4 {
+    opacity: 1;
+    left: -180px;
+    transition: 1s;
+}
+
+/* 섹션 7 */
+.s7 {
+    background-color: #2AC1BC;
+}
+
+.s7-wrap {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.s7 .txt-area {
+    width: 480px;
+    margin-left: 300px;
+    margin-top: 120px;
+}
+
+.s7 .txt-area>img {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.s7 .txt-area>p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.s7-imgbox>img {
+    position: relative;
+    width: 630px;
+    top: 500px;
+    left: -140px;
+
+}
+
+#s7-img.on5 {
+    top: 90px;
+    transition: 1s;
+}
+
+/* 섹션 8 */
+
+/* 푸터 왼쪽 */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 100px auto 30px;
+}
+
+.footer-top-left {
+    width: 50%;
+}
+
+.text1 {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.text2 {
+    display: flex;
+}
+
+.text li {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 24px;
+    width: 140px;
+}
+
+.text1 li:first-child {
+    padding-right: 30px;
+}
+
+.text2 li {
+    padding-right: 40px;
+}
+
+.text img {
+    width: 100%;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    margin-top: 70px;
+}
+
+.icon img {
+    width: 40px;
+}
+
+/* 푸터 오른쪽 */
+.footer-top-right {
+    width: 45%;
+}
+
+.footer-top-right>img {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-top-right>a {
+    display: block;
+}
+
+.footer-top-right>a>img {
+    width: 150px;
+}
+
+/* 푸터 아래 */
+.footer-bottom {
+    width: 1000px;
+    margin: auto;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.p2 span {
+    background: url(../img/beamin/link-line_01@2x.png) center bottom / 100% 3px no-repeat;
+    ;
+}
+
+.p3 a {
+    background: url(../img/beamin/link-line_01@2x.png) center bottom / 100% 3px no-repeat;
+    ;
+}
